@@ -69,6 +69,16 @@ def get_people():
             return people_input
             break
 
+def update_bookings_worksheet():
+    """
+    Update bookings worksheet, add new row with the list data provided
+    """
+    print("Updating bookings worksheet...\n")
+    bookings_worksheet = SHEET.worksheet("bookings")
+    bookings_worksheet.append_row(data)
+    print("Bookings worksheet updated successfully.\n")
 
 name = get_name()
 people = get_people()
+data = name, people
+update_bookings_worksheet()
