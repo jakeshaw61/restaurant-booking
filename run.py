@@ -16,8 +16,20 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('restaurant_booking')
 
-bookings = SHEET.worksheet("bookings")
-
-data = bookings.get_all_values()
-
-print(data)
+def get_name():
+    """
+    Gets the name for the booking from user input.
+    """
+    global FULL_NAME
+    print("Please enter your full name for the booking.\n")
+    while True:
+        first_name = input("Please enter your First name: \n")
+        if validate_name(first_name):
+            break
+    while True:
+        last_name = input("Please enter your Last name: \n")
+        if validate_name(last_name):
+            break
+    FULL_NAME = f"{first_name.capitalize()} {last_name.capitalize()}"
+    print(f"Thank you {FULL_NAME}")
+    return FULL_NAME
