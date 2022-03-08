@@ -52,4 +52,23 @@ def validate_name(name_input):
         return True
     return True
 
+
+def get_people():
+    """
+    Gets the amount of people for the booking.
+    """
+    print("\nHow many people are you booking for?")
+    while True:
+        try:
+            people_input = int(input("Enter amount here: \n"))       
+        except ValueError:
+            print("Not an number! Try again.")
+            continue
+        else:
+            print(f"Booking for {people_input} people.")
+            return people_input
+            break
+
+
 name = get_name()
+people = get_people()
