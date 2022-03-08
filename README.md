@@ -1,7 +1,8 @@
 # Restaurant Booking.
+![Image](assets/images/screenshots/mock-up.png?raw=true)
 This is a table booking service for a restaurant where users can book a table and the amount of people. The data is then updated into a Google worksheet where the restaurant can see all bookings.
 
-You can view the live site here. [Restaurant booking]()
+You can view the live site here. [Restaurant booking](https://restaurant-booking-project.herokuapp.com/)
 
 ## User Experience
 
