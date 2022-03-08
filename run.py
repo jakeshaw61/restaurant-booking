@@ -16,6 +16,7 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('restaurant_booking')
 
+
 def get_name():
     """
     Gets the name for the booking from user input.
@@ -33,6 +34,7 @@ def get_name():
     FULL_NAME = f"{first_name.capitalize()} {last_name.capitalize()}"
     print(f"Thank you {FULL_NAME}")
     return FULL_NAME
+
 
 def validate_name(name_input):
     """
@@ -60,7 +62,7 @@ def get_people():
     print("\nHow many people are you booking for?")
     while True:
         try:
-            people_input = int(input("Enter amount here: \n"))       
+            people_input = int(input("Enter amount here: \n"))
         except ValueError:
             print("Not an number! Try again.")
             continue
@@ -68,6 +70,7 @@ def get_people():
             print(f"Booking for {people_input} people.")
             return people_input
             break
+
 
 def update_bookings_worksheet():
     """
