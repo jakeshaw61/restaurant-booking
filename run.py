@@ -80,7 +80,11 @@ def update_bookings_worksheet():
     bookings_worksheet = SHEET.worksheet("bookings")
     bookings_worksheet.append_row(data)
     print("Bookings worksheet updated successfully.\n")
+    print("Your booking is now confirmed.")
+    print("To make another booking press the 'run programme' button.")
 
+
+print("Welcome to the restaurant booking system.\n")
 name = get_name()
 people = get_people()
 data = name, people
