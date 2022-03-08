@@ -22,7 +22,7 @@ def get_name():
     Gets the name for the booking from user input.
     """
     global FULL_NAME
-    print("Please enter your full name for the booking.\n")
+    print("Please enter your name for the booking.\n")
     while True:
         first_name = input("Please enter your First name: \n")
         if validate_name(first_name):
