@@ -33,3 +33,23 @@ def get_name():
     FULL_NAME = f"{first_name.capitalize()} {last_name.capitalize()}"
     print(f"Thank you {FULL_NAME}")
     return FULL_NAME
+
+def validate_name(name_input):
+    """
+    Validates user-input for name
+    Passes only when the user has submitted a name
+    """
+    if name_input == "":
+        print("Name is required\n")
+        return False
+    elif name_input.isnumeric():
+        print(f"Must be letters only.'{name_input}' is wrong.")
+        return False
+    elif not name_input.isalpha():
+        print(f"Must be letters only.'{name_input}' is wrong.\n")
+        return False
+    else:
+        return True
+    return True
+
+name = get_name()
