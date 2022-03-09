@@ -57,6 +57,7 @@ The last message instructs the user how to make another booking if they wish to.
 - Have a max amount of tables available and the programme will show if the restaurant has any availablity.
 - To add a fucntion where the user can input their email and receive a confirmation of their booking. 
 - Have a menu that the user can go back and change details if entered incorrectly.
+- Add option to choose date and time.
 
 ## Testing 
 
